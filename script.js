@@ -7,7 +7,7 @@ var TodoItem = Backbone.Model.extend({});
 //create a model instance
 var todoItem = new TodoItem({
 	description: 'Pick up milk',
-	status: incomplete,
+	status: 'incomplete',
 	id: 1
 });
 
@@ -33,4 +33,4 @@ var TodoView = Backbone.View.extend({
 
 var todoView = new TodoView({ model: todoItem });
 	todoView.render();
-	alert( todoView.el );
+	console.log( todoView.el );
