@@ -14,18 +14,38 @@
 	<script type="text/javascript" src="ourJavascript.js"></script>
 
 	<style type="text/less">
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed);
+		body{
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-size: 1.5em;
+		}
 		.container-table{
 			
-			*{
-				margin-right: 1px;
+			.theView{
 				background: #efefef;
 				
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				height: 300px;
+				min-height: 300px;
 				resize: vertical;
+				padding: 10px;
 			}
+
+		}
+
+		.trial{
+			clear: both;
+			background: #f60;
+			color: #000;
+			font-size: 1.1em;
+			margin-top: 30px;
+			padding: 50px;
+
+			min-height:  300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 
 		}
 	</style>
@@ -38,13 +58,22 @@
 		<p></p>
 
 		<br><br>
-		<a href="#" data-toggle="tooltip" title="this is a sample tooltip">hover over me</a>
+		<a href="#" class="btn btn-info" 
+			data-toggle="tooltip" data-placement="right"
+			title="this is a sample tooltip">hover over me</a>
+		<br><br>
 	</div>	
 
 	<div class="container container-table">
 		<div class="theView col-xs-2"></div>
-		<div class="theView col-xs-7">dsd</div>
+		<!-- contents displayed here are from ourJavascript.js with the use of backbone.js -->
+		<div id="center-block" class="theView col-xs-8"><b>dsd</b></div>
+		
 		<div class="theView col-xs-2"></div>
+	</div>
+
+	<div class="container trial">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Secumque affirmatis inutile verbum clariora aequitate teneam, delicata virtus fortitudo oratio delicata deorsus perpetiuntur. Negent atomorum perpessio amplificarique possit. Sensuum morati verbis consequamur expedita deserere paratus, fabulas municipem alias magnus loquerer, mediocrem scriptorem beatus vulgo vindicet disserunt. Videretur contumeliae severitatem consule fortunam posteri vituperatoribus inprobitas detracta, altera, disseruerunt dedocendi fabellas significet infanti legerint reliquisti. Firmam carum ruant occultum calere putemus magnopere. Doloremque fuisse ferant, ferantur aegritudo potitur maximis adhuc vero sententiam expetendas.
 	</div>
 </body>
 </html>

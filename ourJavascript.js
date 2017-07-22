@@ -34,14 +34,21 @@ var TodoItem = Backbone.Model.extend({
 
 
 var TodoView = Backbone.View.extend({
+	tagName: 'div',
+	className: 'myClass',
+	id: 'myId',
 	defaults: {},
 	initialize: function(){
 		console.log(this.el);
+		console.log(this.$el);
 
-		this.$el.html("<p class='text-left'>Lorem ipsum dolor sit amet, \
+		//refers to div.theView #center-block
+		this.$el.append("<div>Lorem ipsum dolor sit amet, \
 			consectetur adipisicing elit. Eos, unde eaque tempora voluptate saepe, \
 			fuga perferendis voluptatibus ipsam rerum pariatur iste illo non ullam maxime, \
-			reprehenderit ad voluptatem exercitationem. Exercitationem!</p>");
+			reprehenderit ad voluptatem exercitationem. Exercitationem!</div> XD");
+
+		$('#center-block').append(this.el);
 	}
 });
 
@@ -56,5 +63,6 @@ $(document).ready(function(){
 	//item description: change
 	todoItem.set({ description: "Pick up 4 boxes of milk" });
 
-	var todoView = new TodoView({ el: $(".theView") });
+	// var todoView = new TodoView({el: ".theView"});
+	var todoView = new TodoView();
 });
