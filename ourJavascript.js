@@ -36,7 +36,9 @@ var TodoItem = Backbone.Model.extend({
 var TodoView = Backbone.View.extend({
 	defaults: {},
 	initialize: function(){
-		$('.theView').html("<p class='text-left'>Lorem ipsum dolor sit amet, \
+		console.log(this.el);
+
+		this.$el.html("<p class='text-left'>Lorem ipsum dolor sit amet, \
 			consectetur adipisicing elit. Eos, unde eaque tempora voluptate saepe, \
 			fuga perferendis voluptatibus ipsam rerum pariatur iste illo non ullam maxime, \
 			reprehenderit ad voluptatem exercitationem. Exercitationem!</p>");
@@ -54,5 +56,5 @@ $(document).ready(function(){
 	//item description: change
 	todoItem.set({ description: "Pick up 4 boxes of milk" });
 
-	var todoView = new TodoView();
+	var todoView = new TodoView({ el: $(".theView") });
 });
