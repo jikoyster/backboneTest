@@ -3,6 +3,7 @@ var TodoItem = Backbone.Model.extend({
 	initialize: function(){
 		//nothing to see here...
 		/*console.log("hello Backbone!");*/
+		
 
 		this.bindEvents();
 	},
@@ -42,13 +43,19 @@ var TodoView = Backbone.View.extend({
 		console.log(this.el);
 		console.log(this.$el);
 
-		//refers to div.theView #center-block
+		//*** refers to div.theView #center-block
 		this.$el.append("<div>Lorem ipsum dolor sit amet, \
 			consectetur adipisicing elit. Eos, unde eaque tempora voluptate saepe, \
 			fuga perferendis voluptatibus ipsam rerum pariatur iste illo non ullam maxime, \
-			reprehenderit ad voluptatem exercitationem. Exercitationem!</div> XD");
+			reprehenderit ad voluptatem exercitationem. Exercitationem!</div> ");
 
 		$('#center-block').append(this.el);
+
+		this.render();
+	},
+	render: function(){
+		var template = _.template($("#ourTemplate").html(), {});
+		this.$el.append(template);
 	}
 });
 
@@ -63,6 +70,5 @@ $(document).ready(function(){
 	//item description: change
 	todoItem.set({ description: "Pick up 4 boxes of milk" });
 
-	// var todoView = new TodoView({el: ".theView"});
-	var todoView = new TodoView();
+	var todoView = new TodoView({el: $("#center-block")});
 });
