@@ -64,6 +64,7 @@ var TodoView = Backbone.View.extend({
 		"click span.span2": "clickedSpan2",
 		"mouseover #theDiv": "mouseoverDiv"
 	},
+	/*the functions for the "events" */
 	clickedSpan1: function(){
 		console.log("you clicked .span1");
 	},
@@ -71,10 +72,13 @@ var TodoView = Backbone.View.extend({
 		console.log("you clicked .span2");
 	},
 	mouseoverDiv: function(){
-		alert("mouseover the DIV");
+		// alert("mouseover the DIV");
 		console.log("mouseover the DIV");
 	},
 });
+
+
+
 
 $(document).ready(function(){
 	$('a').click(function(e){ e.preventDefault(); });
