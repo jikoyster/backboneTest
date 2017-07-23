@@ -1,4 +1,6 @@
+//date format options
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+
 var TodoItem = Backbone.Model.extend({
 	initialize: function(){
 		//nothing to see here...
@@ -33,7 +35,7 @@ var TodoItem = Backbone.Model.extend({
 	},
 });
 
-
+//*************************** THE VIEW
 var TodoView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'myClass',
