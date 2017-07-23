@@ -16,12 +16,14 @@ $(document).ready(function(){
 	// individual model
 	var student = new PersonModel({name: "John", id: 0});
 	var teacher = new PersonModel({name: "Zetsu", id: 1});
+	var naruto 	= new PersonModel({name: "Naruto", id: 2});
 
 	// collection
 	var people = new PersonCollection([student, teacher]);
-		people.add([
-			new PersonModel({name: "Naruto", id: 2	}),
-			]);
+		people.add([naruto]);
 
+	console.log("people variable: "+ JSON.stringify(people.toJSON()) );
+
+	people.remove([teacher]);
 	console.log("people variable: "+ JSON.stringify(people.toJSON()) );
 });
