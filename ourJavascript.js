@@ -46,7 +46,7 @@ var TodoView = Backbone.View.extend({
 		console.log(this.$el);
 
 		//*** refers to div.theView #center-block
-		this.$el.append("<div>Lorem ipsum dolor sit amet, \
+		this.$el.append("<div>xxxLorem ipsum dolor sit amet, \
 			consectetur adipisicing elit. Eos, unde eaque tempora voluptate saepe, \
 			fuga perferendis voluptatibus ipsam rerum pariatur iste illo non ullam maxime, \
 			reprehenderit ad voluptatem exercitationem. Exercitationem!</div> ");
