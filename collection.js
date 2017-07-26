@@ -16,7 +16,7 @@ $(document).ready(function(){
 	// individual model
 	var student = new PersonModel({name: "John", id: 0});
 	var teacher = new PersonModel({name: "Zetsu", id: 1});
-	var naruto 	= new PersonModel({name: "Naruto", id: 2});
+	var naruto 	= new PersonModel({name: "Naruto Uzumaki", id: 2});
 
 	// collection
 	var people = new PersonCollection([student, teacher]);
